@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysrule_view_workspace">
+    <sysrule_view_workspace action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>true</advanced>
+        <condition/>
+        <default_tab_focus>Details</default_tab_focus>
+        <default_tab_order>true</default_tab_order>
+        <description/>
+        <disable_section_collapse>false</disable_section_collapse>
+        <experience_restricted>false</experience_restricted>
+        <hide_details>false</hide_details>
+        <hide_journal_input_fields>false</hide_journal_input_fields>
+        <hide_section_menu>false</hide_section_menu>
+        <name>Forec Self Service for New Records</name>
+        <order>100</order>
+        <roles/>
+        <script><![CDATA[(function overrideView(view, is_list) {
+    
+    // Check if the form being loaded is a brand new record
+    if (current.isNewRecord()) {
+        answer = 'ess'; // Force the 'Self-Service' view
+    } else {
+        answer = view;  // Keep whatever view they were using for existing records
+    }
+    
+})(view, is_list);
+]]></script>
+        <sys_class_name>sysrule_view_workspace</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-01 09:36:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>645cbbdf38e303107f44ac7e606b7048</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Forec Self Service for New Records</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Loaner Request" source="x_cdltd_loaner_r_0">631eabb6f86703107f446c6f8688da19</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">631eabb6f86703107f446c6f8688da19</sys_scope>
+        <sys_update_name>sysrule_view_workspace_645cbbdf38e303107f44ac7e606b7048</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-01 09:36:32</sys_updated_on>
+        <table>x_cdltd_loaner_r_0_loaner_request</table>
+        <tabs_order>[{"label":"Details","value":"Details"}]</tabs_order>
+        <view display_value="Self Service" name="ess">b09f3d035c2103107f446f89514927a8</view>
+        <workspace/>
+    </sysrule_view_workspace>
+</record_update>
