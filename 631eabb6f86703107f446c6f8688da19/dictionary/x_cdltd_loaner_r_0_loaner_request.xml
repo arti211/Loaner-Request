@@ -16,6 +16,9 @@
         <element label="Location to be used" max_length="40" name="location_to_be_used" type="string"/>
         <element label="End date" mandatory="true" max_length="255" name="end_date" type="glide_date_time"/>
         <element label="Other" max_length="40" name="other" type="string"/>
+        <element label="Overdue count" max_length="255" name="overdue_count" type="integer"/>
+        <element label="Last overdue reminder" max_length="255" name="last_overdue_reminder" type="glide_date_time"/>
+        <element label="Return reminder" max_length="255" name="return_reminder" type="glide_date_time"/>
         <element choice="3" default="cmdb_ci_computer" label="Item type" max_length="255" name="item_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Laptop" sequence="0" value="cmdb_ci_computer"/>
